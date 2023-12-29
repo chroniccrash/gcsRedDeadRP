@@ -18,6 +18,7 @@ CREATING TABLES: Finished
 CREATING STORED PROCEDURES: Started
 charactersFunctions.sql
 societiesFunctions.sql
+societyLedgerSnapshotsFunctions.sql
 userFunctions.sql
 CREATING STORED PROCEDURES: Finished
 CREATING TABLES: Started
@@ -128,5 +129,6 @@ CREATING TABLES: Finished
 CREATING STORED PROCEDURES: Started
 charactersFunctions.sql
 societiesFunctions.sql
+societyLedgerSnapshotsFunctions.sql
 userFunctions.sql
 CREATING STORED PROCEDURES: Finished
