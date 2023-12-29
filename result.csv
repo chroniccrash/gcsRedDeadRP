@@ -1,0 +1,18 @@
+create.sql:
+Changed database context to 'GayCowboyStuff'.
+DROPPING TABLES: Started
+dropAllTables.sql:
+Msg 3701, Level 11, State 5, Server WIN-MEC6D9EFUQL, Line 15
+Cannot drop the table 'dbo.characterSnapshots', because it does not exist or you do not have permission.
+DROPPING TABLES: Complete
+CREATING TABLES: Started
+createTable_users.sql:
+createTable_itemTypes.sql:
+createTable_items.sql:
+createTable_characters.sql:
+createTable_charactersInventorySnapshot.sql:
+createTable_charactersSnapshot.sql:
+createTable_bankInventorySnapshot.sql:
+createTable_society.sql:
+createTable_societyLedgerSnapshot.sql:
+CREATING TABLES: Completed

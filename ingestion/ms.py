@@ -63,16 +63,27 @@ def getSocietyLedgerSnapshot(dbConnection: pymssql.Connection, data:dict()):
 
 def getUser(dbConnection: pymssql.Connection, userData:dict()):
     cursor = dbConnection.cursor()
-    cmd = """
-    SELECT * FROM dbo.users WHERE
-
-        ('{identifier}', '{steam_name}', '{}', '{}', '{}', '{}');
-    """.format(identifier   = userData.get('identifier', ''),
-               steam_name   = userData.get('steam_name', ''),
-               handle_id    = userData.get('handle_id', 0),
-               discordid    = userData.get('discordid', 0),
-               emailid      = userData.get('email_id', 0),
-               lastLogin    = userData.get('lastLogin', ''))
+    startingCommand = """SELECT * FROM dbo.users"""
+    commands = list()
+    spacer = " "
+    end = ";"
+    if(len(userData > 0)):
+        commands.append("WHERE")
+    if(userData.get('identifier')):
+        commands.append("identifier='{}'".format(userData.get('identifier').replace("'","''")))
+    if(userData.get('steam_name')):
+        commands.append("steam_name='{}'".format(userData.get('steam_name').replace("'","''")))
+    if(userData.get('handle_id')):
+        commands.append("handle_id={}".format(userData.get('handle_id')))
+    if(userData.get('discordid')):
+        commands.append("discord_id={}".format(userData.get('discordid')))
+    if(userData.get('emailid')):
+        commands.append("email_id={}".format(userData.get('emailid')))
+    cmd = startingCommand + spacer + commands[0] + spacer + commands[1]
+    if (len(commands)>2):
+        for command in commands[2:]:
+            cmd += spacer + command
+    cmd += end
     cursor.execute(cmd)
 
 def getBankInventorySnapshots(dbConnection: pymssql.Connection):
@@ -145,7 +156,10 @@ def getUsers(dbConnection: pymssql.Connection):
     SELECT * FROM dbo.users
     """
     cursor.execute(cmd)
-    return cursor.fetchall()
+    results = dict()
+    for entry in cursor.fetchall():
+        results[entry['id']] = entry
+    return results
 
 def generateMSDataBlob(dbConnection: pymssql.Connection):
     result = dict({'bankInventorySnapshot':list(), 

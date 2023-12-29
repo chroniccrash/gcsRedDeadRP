@@ -79,17 +79,19 @@ class Processor:
         for society in self.mariaData['societyLedger']:
             pass
         
-        msUsers = dict()
-        for user in self.msData['users']:
-            msUsers[user['id']] = user
         changes = False
         for key in mariaUsers:
-            if(key not in msUsers):
+            individualChanges = False
+            if(key not in self.msData['users']):
                 changes = True
                 insertUserMS(self.msConnection, mariaUsers[key])
             else:
-                #To-Do: Check for updates
-                pass
+                for k in mariaUsers[key]:
+                    if(mariaUsers[key][k] != self.msData['users'][key][k]):
+                        individualChanges = True
+            if(individualChanges):
+                updateUserMS(self.msConnection, mariaUsers[key])
+                
         if(changes):
             self.msConnection.commit()
         self.refreshData()
