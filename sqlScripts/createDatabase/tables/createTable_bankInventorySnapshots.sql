@@ -1,4 +1,4 @@
-PRINT 'createTable_bankInventorySnapshot.sql:'
+PRINT 'createTable_bankInventorySnapshots.sql:'
 
 SET ANSI_NULLS ON
 GO

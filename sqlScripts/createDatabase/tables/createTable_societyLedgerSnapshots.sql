@@ -1,4 +1,4 @@
-PRINT 'createTable_societyLedgerSnapshot.sql:'
+PRINT 'createTable_societyLedgerSnapshots.sql:'
 
 SET ANSI_NULLS ON
 GO

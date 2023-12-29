@@ -1,18 +1,132 @@
 create.sql:
 Changed database context to 'GayCowboyStuff'.
+drop.sql:
 DROPPING TABLES: Started
-dropAllTables.sql:
-Msg 3701, Level 11, State 5, Server WIN-MEC6D9EFUQL, Line 15
-Cannot drop the table 'dbo.characterSnapshots', because it does not exist or you do not have permission.
-DROPPING TABLES: Complete
+_drop.sql:
+DROPPING TABLES: Finished
 CREATING TABLES: Started
 createTable_users.sql:
 createTable_itemTypes.sql:
 createTable_items.sql:
 createTable_characters.sql:
-createTable_charactersInventorySnapshot.sql:
-createTable_charactersSnapshot.sql:
-createTable_bankInventorySnapshot.sql:
-createTable_society.sql:
-createTable_societyLedgerSnapshot.sql:
-CREATING TABLES: Completed
+createTable_characterInventorySnapshots.sql:
+createTable_characterSnapshots.sql:
+createTable_bankInventorySnapshots.sql:
+createTable_societies.sql:
+createTable_societyLedgerSnapshots.sql:
+CREATING TABLES: Finished
+CREATING STORED PROCEDURES: Started
+charactersFunctions.sql
+societiesFunctions.sql
+userFunctions.sql
+CREATING STORED PROCEDURES: Finished
+CREATING TABLES: Started
+createTable_users.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'users' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+createTable_itemTypes.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'itemTypes' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+createTable_items.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'items' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+createTable_characters.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'characters' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+createTable_characterInventorySnapshots.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'characterInventorySnapshots' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+createTable_characterSnapshots.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'characterSnapshots' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+createTable_bankInventorySnapshots.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'bankInventorySnapshots' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+createTable_societies.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'societies' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+createTable_societyLedgerSnapshots.sql:
+Msg 2714, Level 16, State 6, Server WIN-MEC6D9EFUQL, Line 2
+There is already an object named 'societyLedgerSnapshots' in the database.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+Msg 1781, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Column already has a DEFAULT bound to it.
+Msg 1750, Level 16, State 1, Server WIN-MEC6D9EFUQL, Line 2
+Could not create constraint or index. See previous errors.
+CREATING TABLES: Finished
+CREATING STORED PROCEDURES: Started
+charactersFunctions.sql
+societiesFunctions.sql
+userFunctions.sql
+CREATING STORED PROCEDURES: Finished

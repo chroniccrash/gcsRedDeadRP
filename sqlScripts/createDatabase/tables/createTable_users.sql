@@ -18,15 +18,6 @@ CREATE TABLE [dbo].[users](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[users] ADD  CONSTRAINT [DF_users_handle_id]  DEFAULT ((1)) FOR [handle_id]
-GO
-
-ALTER TABLE [dbo].[users] ADD  CONSTRAINT [DF_iu_discord_id]  DEFAULT ((1)) FOR [discord_id]
-GO
-
-ALTER TABLE [dbo].[users] ADD  CONSTRAINT [DF_users_email_id]  DEFAULT ((1)) FOR [email_id]
-GO
-
 ALTER TABLE [dbo].[users] ADD CONSTRAINT [DF_users_timestampcreated] DEFAULT (GETDATE()) FOR [timestampCreated]
 GO
 

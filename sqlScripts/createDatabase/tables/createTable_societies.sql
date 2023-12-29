@@ -1,4 +1,4 @@
-PRINT 'createTable_society.sql:'
+PRINT 'createTable_societies.sql:'
 
 SET ANSI_NULLS ON
 GO

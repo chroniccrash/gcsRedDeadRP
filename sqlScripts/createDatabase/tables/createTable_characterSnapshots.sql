@@ -1,4 +1,4 @@
-PRINT 'createTable_charactersSnapshot.sql:'
+PRINT 'createTable_characterSnapshots.sql:'
 
 SET ANSI_NULLS ON
 GO
