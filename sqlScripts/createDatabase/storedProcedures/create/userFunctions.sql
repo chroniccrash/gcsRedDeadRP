@@ -118,16 +118,17 @@ AS
 BEGIN
 	SET NOCOUNT ON;
     DECLARE @resp [varchar](200)
-    BEGIN TRAN
+    BEGIN TRAN T1
         BEGIN try
             UPDATE TOP (1) dbo.users 
             SET steam_name=@steam_name, handle_id=@handle_id, discord_id=@discord_id, email_id=@email_id, timestampModified=GETDATE()
             WHERE id=@id
-            COMMIT TRAN
+            COMMIT TRAN T1
         END try
         BEGIN catch
-            ROLLBACK TRAN
+            ROLLBACK TRAN T1
             SET @resp = (convert(varchar,ERROR_LINE()) + ERROR_MESSAGE() )
         END catch
+    PRINT @resp
 END
 GO
