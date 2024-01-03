@@ -1,6 +1,5 @@
 PRINT 'CREATING STORED PROCEDURES: Started'
 
-:r .\sqlScripts\createDatabase\storedProcedures\base\bankInventorySnapshotFunctions.sql -- bankInventorySnapshot Functions
 :r .\sqlScripts\createDatabase\storedProcedures\base\characterInventorySnapshotFunctions.sql -- societyLedgerSnapshots Functions
 :r .\sqlScripts\createDatabase\storedProcedures\base\charactersFunctions.sql -- societyLedgerSnapshots Functions
 :r .\sqlScripts\createDatabase\storedProcedures\base\characterSnapshotsFunctions.sql -- societyLedgerSnapshots Functions

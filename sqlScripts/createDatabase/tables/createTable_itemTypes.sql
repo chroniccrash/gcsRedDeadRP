@@ -8,7 +8,7 @@ GO
 
 CREATE TABLE [dbo].[itemTypes](
 	[id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    [game_id] [int] NOT NULL,
+    [game_id] [int] NULL,
 	[name] [varchar](50) NOT NULL,
 	[timestampCreated] [datetime2](7) NOT NULL,
 	[timestampModified] [datetime2](7) NOT NULL

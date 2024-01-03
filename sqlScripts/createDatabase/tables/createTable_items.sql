@@ -8,7 +8,7 @@ GO
 
 CREATE TABLE [dbo].[items](
 	[id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	[label] [varchar](50) NOT NULL,
+	[name] [varchar](50) NOT NULL,
 	[limit] [int] NOT NULL,
     [type_id] [int] NOT NULL,
 	[description] [varchar](255) NULL,

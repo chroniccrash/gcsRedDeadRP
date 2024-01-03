@@ -10,6 +10,7 @@ CREATE TABLE [dbo].[characterInventorySnapshots](
 	[id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	[character_id] [int] NOT NULL,
 	[item_id] [int] NOT NULL,
+	[isInBank] [bit] NOT NULL,
 	[metadata] [varchar](255) NULL,
 	[count] [int] NOT NULL,
 	[timestampCreated] [datetime2](7) NOT NULL,
